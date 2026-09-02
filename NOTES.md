@@ -13,3 +13,6 @@ I left out a file-by-file walkthrough of `routes/` and `db/store.js` — that's 
 - **Deny**: `Read(./.env)` and `Bash(git push --force:*)`.
 
 Without the `Read(./.env)` deny, Claude could end up reading real secrets into context (and potentially echoing them back or into a commit) just by exploring the repo — there's nothing else stopping it from opening that file. Without the force-push deny, a bad rebase or an overeager "let me fix this" could overwrite shared history on the remote with no easy way back.
+
+## Checks done
+- I run the command /memory and /permissions to check if my changes are present
